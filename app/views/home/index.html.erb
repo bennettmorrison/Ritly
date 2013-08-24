@@ -1,0 +1,16 @@
+Welcome to Ritly.
+
+<p>Use this form to create new URLs.</p>
+
+<p>
+<%= form_for @url do |f| %>
+  <div>
+  <%= f.label :link %>
+  <%= f.text_field :link %>
+  </div>
+  <%= f.submit %>
+<% end %>
+</p>
+<p>
+<%= render 'table' %>
+</p>

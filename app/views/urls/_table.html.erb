@@ -1,0 +1,14 @@
+<table border="1">
+	<% @urls.each do |url| %>
+<tr>
+<td>
+	<%= link_to (url) do%>
+	<%= url.link %>
+	<% end %>
+</td>
+<td>
+	<%= url.hash %>
+</td>
+</tr>
+<% end %>
+</table>
