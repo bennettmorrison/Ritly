@@ -11,7 +11,7 @@ class UrlsController < ApplicationController
   def create
     safe_url = params.require(:url).permit(:link)
     @url = Url.new safe_url
-    @url.hash = rand(10000)
+    @url.hash_urls = rand(10000)
     if @url.save
       redirect_to @url
     else
@@ -19,6 +19,12 @@ class UrlsController < ApplicationController
   end
 
   def show
+    @url = Url.find(params[:id])
+  end
+
+  def redirectors
+    @url = Url.where(params[:hash_urls])
+    redirect_to @url.link
   end
 
 private
