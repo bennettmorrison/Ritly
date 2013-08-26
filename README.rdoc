@@ -6,11 +6,11 @@ Things to know about this version:
 
 It only works if the url has an http.  So, for example:
 
-> www.google.com
+> "www.google.com"
 
 will not work.  Whereas:
 
-> http://google.com
+> "http://google.com"
 
 will work. 
 
