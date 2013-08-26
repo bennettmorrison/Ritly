@@ -10,7 +10,7 @@ It only works if the url has an http.  So, for example:
 
 will not work.  Whereas:
 
->http://google.com
+> http://google.com
 
 will work. 
 
