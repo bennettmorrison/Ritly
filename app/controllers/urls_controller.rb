@@ -23,8 +23,12 @@ class UrlsController < ApplicationController
   end
 
   def redirectors
-    @url = Url.where(params[:hash_urls])
-    redirect_to @url.link
+    @url = Url.find_by hash_urls: (params[:some_totally_random_value])
+    if @url
+      redirect_to @url.link
+    else
+      redirect_to root_path
+    end
   end
 
 private
