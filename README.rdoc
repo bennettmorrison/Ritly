@@ -1,28 +1,23 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the Ritly file that is homework for my Back End Web Development class.  It's a web app with roughly the same functionality as Bitly.
 
-Things you may want to cover:
+Things to know about this version:
 
-* Ruby version
+It only works if the url has an http.  So, for example:
 
-* System dependencies
+> www.google.com
 
-* Configuration
+will not work.  Whereas:
 
-* Database creation
+>http://google.com
 
-* Database initialization
+will work. 
 
-* How to run the test suite
+If I wanted to fix this, I would add some type of check in the controller, probably at the create function to ensure that the create had a "http:/" (and it's variants). And, if not, to add it.
 
-* Services (job queues, cache servers, search engines, etc.)
+It allows for multiple versions of urls
 
-* Deployment instructions
-
-* ...
+It does not allow for destroying urls
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
